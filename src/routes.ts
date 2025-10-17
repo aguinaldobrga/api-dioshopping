@@ -7,8 +7,8 @@ const router = Router();
 const createMessageController = new CreateMessageController();
 const listMessageController = new ListMessageController();
 
-router.get('/', (request: Request, response: Response) => {
-    return response.json({message: 'Bem vindo a API Dio Shopping'})
+router.get('/', (req: Request, res: Response) => {
+    return res.status(201).send('API DioShopping está rodando!')
 })
 
 router.get('/message', listMessageController.hanle)
